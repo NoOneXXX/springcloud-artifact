@@ -1,0 +1,18 @@
+server:
+  port: 3377
+
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.1.92:80 #Nacos naming service , this is cluster config
+      config:
+        server-addr: 10.10.1.92:80 #Nacos config service
+        file-extension: yaml # 指定的文件后缀
+        #group:  TEST_GROUP # 进行分组
+        #namespace:  101fb942-78bd-4c78-bde1-970d28d6b57e
+
+#${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+# 所以这个配置文件读取的就是 nacos-config-client-dev.yaml
