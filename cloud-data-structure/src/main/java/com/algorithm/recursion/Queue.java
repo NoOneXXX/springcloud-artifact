@@ -1,10 +1,6 @@
 package com.algorithm.recursion;
 
 
-import java.util.Arrays;
-
-import static sun.misc.Version.print;
-
 public class Queue {
     //定义一共有多少个皇后
     int max = 8;
